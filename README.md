@@ -6,7 +6,7 @@ downstream use cases for relevant brands, such as ads insertion, video search,
 and clipping services. In this challenge, we have explored convolutional neural network (CNN) for identification of logo and data augmentation using
 Keras ImageDataGenerator library to augment images.
 
-# Data Exploration
+## Data Exploration
 We explored the dataset and plot distribution of brand-wise train and test
 examples. Each vehicle brand
 
@@ -18,10 +18,11 @@ images of 18 auto brands, while 5-9 images are hold out for testing. Figure show
 range 0 to 1 for faster processing using value 1/255. These resize and normalization operations on images are performed using parameters passed thorough
 ImageDataGenerator from keras library.
 
-![](Plots/model_224.png)
+
+<img src="https://github.com/snehalpimple/Logo_Detection/blob/main/Plots/model_224.png" width=60% height=60%>
 
 
-# Convolutional Neural Network
+## Convolutional Neural Network
 We use convolutional neural network (CNN) for logo classification. We use
 below model architecture for CNN. While there is a scope of hyperparameter
 tuning, we limited ourselves with the architecture presented in Fig. 3 due
@@ -29,7 +30,7 @@ to limited time availability. However, we would like to note that this model
 architecture has been well studied in my previous project on Skin Cancer
 Detection using CNN.
 
-# Results and Observations
+## Results and Observations for Baseline CNN
 For our chosen CNN model and without any data augmentation, we observer training accuracy for logo identification model is 99.80%. The final
 performance of this CNN model on test data is 23.70%.
 Below figure 4a and 4b, shows the plots for accuracy and loss versus every
@@ -80,6 +81,7 @@ Original Image             |  Zoomed Image
 :-------------------------:|:-------------------------:
 ![](Plots/Rotation/0.jpg)  |  ![](Plots/Zoom/1.jpeg)
 
+## Results and Observations for CNN with Data Augmentation
 For our chosen CNN model and with data augmentation (combined rotation,
 horizontal, vertical shift, and zooming), we observed training accuracy for
 logo identification model is 39.90%. The final performance of this CNN
