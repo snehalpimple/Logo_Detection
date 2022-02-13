@@ -38,8 +38,10 @@ logo images for 18 classes) and moderately complex CNN architecture, we
 expected to see the significant gap in loss (and accuracy) of traning vs testing
 data. This explains the overfitting problem that our model suffers from.
 
-![](Plots/accuracy.png)
-![](Plots/loss.png)
+Accuracy Curve           |  Loss Curve
+:-------------------------:|:-------------------------:
+![](Plots/accuracy.png)  |  ![](Plots/loss.png)
+
 
 # Data Augmentation
 To increase the size of training data, we explored data augmentation from
@@ -50,6 +52,10 @@ This augmentation method randomly rotates the image clockwise with a set
 number of degrees from 0 to 360.
 We use rotation range argument of ImageDataGenerator to augments images with random rotations.
 
+Original Image             |  Rotated Image
+:-------------------------:|:-------------------------:
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Rotation/1.jpeg)
+
 ## Horizontal and Vertical Shift Augmentation
 Here, we intentionally shift images, i.e, move all pixels of the image in one
 direction, such as horizontally or vertically, while maintaining the image
@@ -57,10 +63,22 @@ dimensions the same.
 We use width shift range and height shift range arguments of ImageDataGenerator
 to make horizontal and vertical shift.
 
+Original Image             |  Horizontal Image
+:-------------------------:|:-------------------------:
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Horizontal/1.jpeg)
+
+Original Image             |  Vertical Image
+:-------------------------:|:-------------------------:
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Horizontal/1.jpeg)
+
 ## Random Zoom Augmentation
 With a zoom augmentation, we can randomly zoom in (adds new pixel values
 around the image) or zoom out (interpolates pixel values).
 We configure image zooming with zoom range argument to the ImageDataGenerator.
+
+Original Image             |  Zoomed Image
+:-------------------------:|:-------------------------:
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Zoom/1.jpeg)
 
 For our chosen CNN model and with data augmentation (combined rotation,
 horizontal, vertical shift, and zooming), we observed training accuracy for
@@ -75,6 +93,8 @@ have achieved higher accuracy if we would have trained for a large number
 of epochs. In other words, data augmentation may potentially lead longer
 training time to improve classification performance.
 
-![](Plots/accuracy_augment.png)
-![](Plots/loss_augment.png)
+Accuracy Curve           |  Loss Curve
+:-------------------------:|:-------------------------:
+![](Plots/accuracy_augment.png)  |  ![](Plots/loss_augment.png)
+
 
