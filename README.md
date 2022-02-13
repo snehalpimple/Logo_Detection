@@ -53,9 +53,9 @@ This augmentation method randomly rotates the image clockwise with a set
 number of degrees from 0 to 360.
 We use rotation range argument of ImageDataGenerator to augments images with random rotations.
 
-Original Image             |  Rotated Image
-:-------------------------:|:-------------------------:
-![](Plots/Rotation/0.jpg)  |  ![](Plots/Rotation/1.jpeg)
+Original Image             |  Rotated Image 1 |  Rotated Image 2
+:-------------------------:|:-------------------------:| :-------------------------:|
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Rotation/1.jpeg) | ![](Plots/Rotation/3.jpeg)
 
 ## Horizontal and Vertical Shift Augmentation
 Here, we intentionally shift images, i.e, move all pixels of the image in one
@@ -64,22 +64,31 @@ dimensions the same.
 We use width shift range and height shift range arguments of ImageDataGenerator
 to make horizontal and vertical shift.
 
-Original Image             |  Horizontal Image
-:-------------------------:|:-------------------------:
-![](Plots/Rotation/0.jpg)  |  ![](Plots/Horizontal/1.jpeg)
+Original Image             |  Horizontal Image 1 |  Horizontal Image 2 |
+:-------------------------:|:-------------------------: | :-------------------------:|
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Horizontal/1.jpeg) |  ![](Plots/Horizontal/3.jpeg) |
 
-Original Image             |  Vertical Image
-:-------------------------:|:-------------------------:
-![](Plots/Rotation/0.jpg)  |  ![](Plots/Horizontal/1.jpeg)
+Original Image             |  Vertical Image 1 |  Vertical Image 2 |
+:-------------------------:|:-------------------------: |:-------------------------:|
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Vertical/1.jpeg) |  ![](Plots/Vertical/3.jpeg) |
 
 ## Random Zoom Augmentation
 With a zoom augmentation, we can randomly zoom in (adds new pixel values
 around the image) or zoom out (interpolates pixel values).
 We configure image zooming with zoom range argument to the ImageDataGenerator.
 
-Original Image             |  Zoomed Image
-:-------------------------:|:-------------------------:
-![](Plots/Rotation/0.jpg)  |  ![](Plots/Zoom/1.jpeg)
+
+Original Image             |  Zoomed Image 1 |  Zoomed Image 2 |
+:-------------------------:|:-------------------------: | :-------------------------:|
+![](Plots/Rotation/0.jpg)  |  ![](Plots/Zoom/1.jpeg) | ![](Plots/Zoom/2.jpeg) |
+
+<!---
+<p float="left">
+  <img src="Plots/Rotation/0.jpg" width="25%" />
+  <img src="Plots/Zoom/1.jpeg" width="25%" /> 
+  <img src="Plots/Zoom/2.jpeg" width="25%" />
+</p>
+-->
 
 ## Results and Observations for CNN with Data Augmentation
 For our chosen CNN model and with data augmentation (combined rotation,
