@@ -10,10 +10,16 @@ Keras ImageDataGenerator library to augment images.
 We explored the dataset and plot distribution of brand-wise train and test
 examples. Each vehicle brand
 
+![](Plots/dataset_distribution.png)
+![](Plots/class_sample_images.png)
+
 To build the model for logo detection, we have used a dataset of 900 training
 images of 18 auto brands, while 5-9 images are hold out for testing. Figure shows the distribution of overall dataset used for model training. The original logo images are resized to shape (150, 150, 3) that is for three channels red, green, and blue. Later, these images are normalized between
 range 0 to 1 for faster processing using value 1/255. These resize and normalization operations on images are performed using parameters passed thorough
 ImageDataGenerator from keras library.
+
+![](Plots/model_224.png)
+
 
 # Convolutional Neural Network
 We use convolutional neural network (CNN) for logo classification. We use
@@ -31,6 +37,9 @@ epochs on training and testing data. With limited training data (< 900
 logo images for 18 classes) and moderately complex CNN architecture, we
 expected to see the significant gap in loss (and accuracy) of traning vs testing
 data. This explains the overfitting problem that our model suffers from.
+
+![](Plots/accuracy.png)
+![](Plots/loss.png)
 
 # Data Augmentation
 To increase the size of training data, we explored data augmentation from
@@ -65,4 +74,7 @@ training data. While we limit training the model over 100 epochs, we might
 have achieved higher accuracy if we would have trained for a large number
 of epochs. In other words, data augmentation may potentially lead longer
 training time to improve classification performance.
+
+![](Plots/accuracy_augment.png)
+![](Plots/loss_augment.png)
 
